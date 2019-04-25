@@ -26,7 +26,7 @@ class ViewAllEntries_Controller extends CI_Controller {
  }
 	public function index()
 	{
-    $data['entries'] = $this->EntriesModel->getDataJurnal();
+		$data['entries'] = $this->EntriesModel->getDataJurnal();
 		$this->load->view('ViewAllEntries',$data);
 	}
 }
