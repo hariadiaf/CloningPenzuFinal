@@ -15,9 +15,14 @@
        //      // $this->db->update('entries',$data);
        // }
        public function deleteJurnal($table, $where){
-      		$this->db->where($where);
-      		$this->db->delete('entries',$table);
+      		$this->db->delete($table,$where);
 	     }
+
+       public function updateJurnal($table, $data, $where){
+         $this->db->update($table, $data ,$where); 
+       }
+
+
        public function getDataJurnalWheres($where){
          $this->db->select("idJurnal,title,text,date");
          $this->db->from("entries");

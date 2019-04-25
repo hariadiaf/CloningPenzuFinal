@@ -16,7 +16,7 @@ function __construct(){
 
 	}
   public function tambahEntries(){
-    
+
         $data = array(
             "title" => $this->input->post('title'),
             "text" => $this->input->post('deskripsi'),
@@ -29,6 +29,7 @@ function __construct(){
 public function hapusEntries($id){
   $where = array('idJurnal' => $id);
   $this->EntriesModel->deleteJurnal("entries",$where);
+  redirect("Entries_Controller");
 }
 public function ubahEntries($id){
   $where = array('idJurnal' => $id);
@@ -37,8 +38,8 @@ public function ubahEntries($id){
     "text" => $this->input->post('deskripsi'),
     "date" => date('Y-m-d H:i:s'),
   );
-  $this->EntriesModel->updateJurnal("entries",$where);
-  redirect("entries");
+  $this->EntriesModel->updateJurnal("entries",$data ,$where);
+  redirect("Entries_Controller");
 }
 
 public function getDataJurnalWhere($id){

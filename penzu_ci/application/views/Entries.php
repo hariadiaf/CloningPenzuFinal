@@ -194,8 +194,8 @@
 
 
 <?php if($this->uri->segment('2') == "getDataJurnalWhere"){?>
-    <form>
-    <?php foreach($ent as $row){?>
+  <?php foreach($ent as $row){?>
+    <form method="post" action="<?= base_url('index.php/Entries_Controller/ubahEntries/'.$row->idJurnal) ?>">
       <div id="title" class="d-flex flex-column container">
         <input type="text" name="title" placeholder="Entry Title" style="
         font-family : times new roman;
@@ -206,18 +206,18 @@
           <h6><img src="<?= base_url('assets/img/calendar.png') ?>" width="20px"> Mon. 4/22/2019</h6>
           <input type="submit" class="float-right" name="btnChangeThemes" style="background-color : #484848; padding : 6px 8px;
           text-decoration: none;  font-weight : bold; border-radius : 6px; font-style : bold; color : #ffffff; margin-right : 8px;" value="Save"/>
-          <a href="#" class="float-right" name="btnChangeThemes" style="background-color : #484848; padding : 6px 8px;
-          text-decoration: none;  font-weight : bold; border-radius : 6px; font-style : bold; color : #ffffff; margin-right : 8px;">Edit</a>
-          <a href="#" class="float-right" name="btnChangeThemes" style="background-color : #EF4228; padding : 6px 8px;
+          <input type="submit" class="float-right" name="btnEdit" value="Edit" style="background-color : #484848; padding : 6px 8px;
+          text-decoration: none;  font-weight : bold; border-radius : 6px; font-style : bold; color : #ffffff; margin-right : 8px;"/>
+          <a href="<?= base_url('index.php/Entries_Controller/hapusEntries/'.$row->idJurnal) ?>" class="float-right" name="btnChangeThemes" style="background-color : #EF4228; padding : 6px 8px;
           text-decoration: none;  font-weight : bold; border-radius : 6px; font-style : bold; color : #ffffff; margin-right : 8px;">Delete</a>
         </div>
-        <textarea name="deskripsi1" id="name" rows="8" cols="80" placeholder="Your Entry Here" style="
+        <textarea name="deskripsi" id="name" rows="8" cols="80" placeholder="Your Entry Here" style="
         font-family : times new roman;
         font-size : 16px;
         border-radius : 2px;
         padding : 16px 24px;"><?= $row->text?></textarea>
+      </form>
     <?php } ?>
-    </form>
   <?php }else{ ?>
     <form action="<?= base_url('index.php/Entries_Controller/tambahEntries')?>" method="post">
       <div id="title" class="d-flex flex-column container">
@@ -230,7 +230,7 @@
           <h6><img src="<?= base_url('assets/img/calendar.png') ?>" width="20px"> Mon. 4/22/2019</h6>
           <input type="submit" class="float-right" name="btnChangeThemes" style="background-color : #484848; padding : 6px 8px;
           text-decoration: none;  font-weight : bold; border-radius : 6px; font-style : bold; color : #ffffff; margin-right : 8px;" value="Save"/>
-          <a href="#" class="float-right" name="btnChangeThemes" style="background-color : #484848; padding : 6px 8px;
+          <a href="" class="float-right" name="btnChangeThemes" style="background-color : #484848; padding : 6px 8px;
           text-decoration: none;  font-weight : bold; border-radius : 6px; font-style : bold; color : #ffffff; margin-right : 8px;">Edit</a>
           <a href="#" class="float-right" name="btnChangeThemes" style="background-color : #EF4228; padding : 6px 8px;
           text-decoration: none;  font-weight : bold; border-radius : 6px; font-style : bold; color : #ffffff; margin-right : 8px;">Delete</a>
@@ -242,13 +242,13 @@
         padding : 16px 24px;"></textarea>
       </form>
     <?php } ?>
-  <script src="https://cdn.ckeditor.com/4.11.4/standard/ckeditor.js"></script>
-  <script>
-  CKEDITOR.replace( 'deskripsi');
-  </script>
-  <script>
-  CKEDITOR.replace( 'deskripsi1');
-  </script>
-</div>
+    <script src="https://cdn.ckeditor.com/4.11.4/standard/ckeditor.js"></script>
+    <script>
+    CKEDITOR.replace( 'deskripsi');
+    </script>
+    <script>
+    CKEDITOR.replace( 'deskripsi1');
+    </script>
+  </div>
 </body>
 </html>
