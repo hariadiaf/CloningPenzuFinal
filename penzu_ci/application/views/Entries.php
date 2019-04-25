@@ -86,14 +86,16 @@
       <!-- <a class="navbar-brand" href="#">Navbar</a> -->
       <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <?php foreach($akuns as $row){?>
         <div class="dropdown">
           <button class="btn  dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="border : none; color : #FFFFFF;">
-            hariadi's journal
+          <?= $row->first_name?>'s Journal
           </button>
           <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
             <button href="<?= site_url('JurnalController') ?>" class="dropdown-item" type="button"> <img src="<?= base_url('assets/img/home.png') ?>" width="16px"> Home</button>
-            <button class="dropdown-item" type="button">hariadi's journal</button>
+            <button class="dropdown-item" type="button"><?= $row->first_name?></button>
           </div>
+          <?php }?>
           <div class="input-group flex-nowrap" style="display: inherit; background-color : #B00B1B; border-radius : 20px;">
             <!-- <div class="input-group-prepend">
             <span class="input-group-text" id="addon-wrapping"
@@ -157,9 +159,11 @@
         </style>
 
         <div class="dropdown">
+        <?php foreach($akuns as $row){?>
           <button class="btn  dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="border : none; color : #FFFFFF;">
-            User
+          <?= $row->first_name?>
           </button>
+          <?php }?>
           <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
             <button class="dropdown-item" type="button">Penzu Podcast</button>
             <button class="dropdown-item" type="button">Account</button>
