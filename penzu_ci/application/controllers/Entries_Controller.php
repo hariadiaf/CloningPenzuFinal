@@ -49,6 +49,10 @@ public function ubahEntries($id){
 public function getDataJurnalWhere($id){
     $data['ent'] = $this->EntriesModel->getDataJurnalWheres($id);
     $data['entri'] = $this->EntriesModel->getDataJurnal();
+
+    $where = array('id_user' => $this->session->userdata('id'));
+    $data['akuns'] = $this->AccountModel->edit_data($where,'akun');
+
     $this->load->view('entries',$data);
 }
 /////
@@ -62,19 +66,19 @@ function edit($id_user){
       $first_name = $this->input->post('firstName');
       $last_name = $this->input->post('lastName');
       $email = $this->input->post('email');
-   
+
       $data = array(
           'first_name' => $first_name,
           'last_name' => $last_name,
           'email' => $email
       );
-   
+
       $where = array(
           'id_user' => $this->session->userdata('id')
       );
-   
+
       $this->AccountModel->update_data($where,$data,'akun');
       redirect('AccountController');
-  
+
 }
 }
