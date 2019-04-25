@@ -12,7 +12,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-
+    <link rel="stylesheet" href="<?= base_url("assets/viewallentries.css") ?>">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
   </head>
   <body>
 
@@ -74,7 +75,7 @@
         </div>
       </nav>
       <div class="" style="background-color : #E8E8E8; position: relative; bottom: 24px; padding : 12px;">
-        <a href="#" class="float-right" name="btnNewJournal" style="background-color : #258CD1; padding : 6px 8px;
+        <a href="<?= site_url('Entries_Controller') ?>" class="float-right" name="btnNewJournal" style="background-color : #258CD1; padding : 6px 8px;
         text-decoration: none;  font-weight : bold; border-radius : 4px; font-style : bold; color : #ffffff; margin-right : 180px;"> <img src="<?= base_url('assets/img/add.png');?>" width="16px">  New Entry </a>
 
         <a href="#" class="float-right" name="btnTag" style=" padding : 6px 8px;
@@ -83,7 +84,7 @@
         <a href="#" class="float-right" name="btnChangeThemes" style=" padding : 6px 8px;
         text-decoration: none;  font-weight : bold; border-radius : 6px; font-style : bold; color : #ffffff; margin-right : 8px;"> <img src="<?= base_url('assets/img/settings.png') ?>" width="20px"></a>
         <div class="">
-          <a href="#" style="margin-left : 200px; font-size: 20px; font-weight: 700; font-style : bold; color : #575E66;" >hariadi's Journal</a>
+          <a class="name" href="#">hariadi's Journal</a>
           <p style="margin-left : 200px; font-family: arial; color : #575E66">4 total entries | Created on Thu. 3/28/2019</p>
         </div>
 
@@ -92,9 +93,9 @@
               <div class="">
                 <p style="font-weight : bold; color : #9098A5; margin-left : 210px; font-size : 12px;">SELECT</p>
                 <select name="cars" class="custom-select-lg mb-3" style="margin-left: 210px; width : 180px; border-radius : 3px; font-size : 16px;">
-                  <option selected>All Entries</option>
+                  <option value="allentries">All Entries</option>
                   <option value="this page">This Page</option>
-                  <option value="none">None</option>
+                  <option selected value="none">None</option>
                 </select>
               </div>
               <div class="">
