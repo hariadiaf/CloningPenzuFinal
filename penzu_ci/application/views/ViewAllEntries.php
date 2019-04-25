@@ -59,9 +59,11 @@
             </style>
 
             <div class="dropdown">
+            <?php foreach($akuns as $row){?>
               <button class="btn  dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="border : none; color : #FFFFFF;">
-                User
+              <?= $row->first_name?>
               </button>
+              <?php }?>
               <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
                 <button class="dropdown-item" type="button">Penzu Podcast</button>
                 <button class="dropdown-item" type="button">Account</button>
@@ -82,11 +84,12 @@
 
         <a href="#" class="float-right" name="btnChangeThemes" style=" padding : 6px 8px;
         text-decoration: none;  font-weight : bold; border-radius : 6px; font-style : bold; color : #ffffff; margin-right : 8px;"> <img src="<?= base_url('assets/img/settings.png') ?>" width="20px"></a>
+        <?php foreach($akuns as $row){?>
         <div class="">
-          <a href="#" style="margin-left : 200px; font-size: 20px; font-weight: 700; font-style : bold; color : #575E66;" >hariadi's Journal</a>
+          <a href="#" style="margin-left : 200px; font-size: 20px; font-weight: 700; font-style : bold; color : #575E66;" ><?= $row->first_name?>'s Journal</a>
           <p style="margin-left : 200px; font-family: arial; color : #575E66">4 total entries | Created on Thu. 3/28/2019</p>
         </div>
-
+        <?php }?>
           <div>
             <form class="row">
               <div class="">
