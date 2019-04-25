@@ -1,0 +1,104 @@
+body {
+    overflow: scroll;
+}
+
+
+#Bg {
+    background-color: #f23f21;
+    height: 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 900;
+}
+
+.link {
+    margin: -120px 0 0 300px;
+}
+
+#logotgh{
+    position : absolute;
+    top : 14px;
+    bottom : 9px;
+    right : 628.75px;
+    left : 674.5px;
+    display : block;
+    height : 27px;
+    width : 91.5px;
+    margin : 0 0 0 -46px;
+    height : 27px;
+    width : 91.5px;
+    margin : 0 0 0 -46px;
+    width: 100px;
+}
+
+
+#B {
+    font-family : "Open Sans", helvetica, sans-serif;
+    font-size : 14px;
+    font-weight : 700;
+    line-height : 14px;
+    text-align : center;
+    background-color :  #FFFFFF;
+    color: #f23f21;
+    padding : 6px 8px 6px 8px;
+}
+
+#C {
+    font-family : "Open Sans", helvetica, sans-serif;
+    font-size : 13px;
+    font-weight : 600;
+    line-height : 19.6px;
+    text-decoration : underline solid rgb(255, 255, 255);
+    color :  #FFFFFF;
+    height : 31px;
+    width : 73.5313px;
+    padding : 6px 8px 6px 16px;
+}
+
+
+
+h2 {
+    font-family : "Open Sans", helvetica, sans-serif;
+font-size : 20px;
+font-weight : 300;
+line-height : 22px;
+text-decoration : none solid rgb(75, 82, 91);
+word-spacing : 0px;
+}
+
+.form-group{
+  
+    margin: 5% 0 0 37%;
+}
+
+#buton {
+    font-family : "Open Sans", helvetica, sans-serif;
+font-size : 14px;
+font-weight : 600;
+line-height : 14px;
+text-decoration : none solid rgb(255, 255, 255);
+text-align : center;
+vertical-align : middle;
+white-space : nowrap;
+word-spacing : 0px;
+background-color :  #3498DB;
+background-position : 0% 0%;
+color :  #FFFFFF;
+height : 42px;
+width : 189.766px;
+border : 1px solid  #FFFFFF;
+margin : 0 10px 0 0;
+padding : 13px 40px 13px 40px;
+display : inline-block;
+cursor : pointer;
+transform : none;
+transition : background 0.2s ease 0.05s;
+box-sizing : border-box;
+border-top-left-radius : 3px;
+border-top-right-radius : 3px;
+border-bottom-left-radius : 3px;
+border-bottom-right-radius : 3px;
+}
+
