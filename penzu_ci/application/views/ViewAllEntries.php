@@ -95,59 +95,83 @@
         text-decoration: none;  font-weight : bold; border-radius : 6px; font-style : bold; color : #ffffff; margin-right : 8px;"> <img
                     src="<?= base_url('assets/img/cloudDownload.png') ?>" width="20px"></a>
 
-            <a href="#" class="float-right" name="btnChangeThemes"
-                style=" padding : 6px 8px;
-        text-decoration: none;  font-weight : bold; border-radius : 6px; font-style : bold; color : #ffffff; margin-right : 8px;"> <img
-                    src="<?= base_url('assets/img/settings.png') ?>" width="20px"></a>
-            <div class="">
-                <a class="name" href="#">hariadi's Journal</a>
-                <p style="margin-left : 200px; font-family: arial; color : #575E66">4 total entries | Created on Thu.
-                    3/28/2019</p>
-            </div>
+            <style>
+            .vl {
+              border-left: 6px solid black;
+              height: 500px;
+            }
+            </style>
 
-            <div>
-                <form class="row">
-                    <div class="">
-                        <p style="font-weight : bold; color : #9098A5; margin-left : 210px; font-size : 12px;">SELECT
-                        </p>
-                        <select name="cars" class="custom-select-lg mb-3"
-                            style="margin-left: 210px; width : 180px; border-radius : 3px; font-size : 16px;">
-                            <option value="allentries">All Entries</option>
-                            <option value="this page">This Page</option>
-                            <option selected value="none">None</option>
-                        </select>
-                    </div>
-                    <div class="">
-                        <p style="font-weight : bold; color : #9098A5; margin-left : 20px; font-size : 12px;">SINCE</p>
-                        <select name="cars" class="custom-select-lg mb-3"
-                            style="margin-left: 20px; width : 180px; border-radius : 3px; font-size : 16px;">
-                            <option selected>All Time</option>
-                            <option value="today">Today</option>
-                            <option value="yesterday">Yesterday</option>
-                            <option value="this week">This Week</option>
-                            <option value="last 7 days">Last 7 Days</option>
-                            <option value="This Month">This Month</option>
-                            <option value="Last Month">Last Month</option>
-                            <option value="last 30 days">Last 30 days</option>
-                            <option value="this year">This Year</option>
-                        </select>
-                    </div>
-                    <div class="">
-                        <p style="font-weight : bold; color : #9098A5; margin-left : 20px; font-size : 12px;">VIEW</p>
-                        <select name="cars" class="custom-select-lg mb-3"
-                            style="margin-left: 20px; width : 180px; border-radius : 3px; font-size : 16px;">
-                            <option selected>Active Entries</option>
-                            <option value="Starred">Starred</option>
-                            <option value="Trash">Trash</option>
-                        </select>
-                    </div>
-                    <div class="">
-                        <p style="font-weight : bold; color : #9098A5; margin-left : 20px; font-size : 12px;"> </p>
-                        <input class="form-control mb-3" id="myInput" type="text" placeholder=" Search this journal"
-                            style="margin-left : 20px; width : 200px; margin-top : 26px; font-size : 16px; border-radius : 3px;">
-                    </div>
-                </form>
+            <div class="dropdown">
+            <?php foreach($akuns as $row){?>
+              <button class="btn  dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="border : none; color : #FFFFFF;">
+              <?= $row->first_name?>
+              </button>
+              <?php }?>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                <button class="dropdown-item" type="button">Penzu Podcast</button>
+                <button class="dropdown-item" type="button">Account</button>
+                <button class="dropdown-item" type="button">Help & FAQs</button>
+                <button class="dropdown-item" type="button">Pro Support</button>
+                <button class="dropdown-item" type="button">Logout  </button>
+              </div>
             </div>
+          </form>
+        </div>
+      </nav>
+      <div class="" style="background-color : #E8E8E8; position: relative; bottom: 24px; padding : 12px;">
+        <a href="<?= site_url('Entries_Controller') ?>" class="float-right" name="btnNewJournal" style="background-color : #258CD1; padding : 6px 8px;
+        text-decoration: none;  font-weight : bold; border-radius : 4px; font-style : bold; color : #ffffff; margin-right : 180px;"> <img src="<?= base_url('assets/img/add.png');?>" width="16px">  New Entry </a>
+
+        <a href="#" class="float-right" name="btnTag" style=" padding : 6px 8px;
+        text-decoration: none;  font-weight : bold; border-radius : 6px; font-style : bold; color : #ffffff; margin-right : 8px;"> <img src="<?= base_url('assets/img/cloudDownload.png') ?>" width="20px"></a>
+
+        <a href="#" class="float-right" name="btnChangeThemes" style=" padding : 6px 8px;
+        text-decoration: none;  font-weight : bold; border-radius : 6px; font-style : bold; color : #ffffff; margin-right : 8px;"> <img src="<?= base_url('assets/img/settings.png') ?>" width="20px"></a>
+        <?php foreach($akuns as $row){?>
+        <div class="">
+          <a href="#" style="margin-left : 200px; font-size: 20px; font-weight: 700; font-style : bold; color : #575E66;" ><?= $row->first_name?>'s Journal</a>
+          <p style="margin-left : 200px; font-family: arial; color : #575E66">4 total entries | Created on Thu. 3/28/2019</p>
+        </div>
+        <?php }?>
+          <div>
+            <form class="row">
+              <div class="">
+                <p style="font-weight : bold; color : #9098A5; margin-left : 210px; font-size : 12px;">SELECT</p>
+                <select name="cars" class="custom-select-lg mb-3" style="margin-left: 210px; width : 180px; border-radius : 3px; font-size : 16px;">
+                  <option value="allentries">All Entries</option>
+                  <option value="this page">This Page</option>
+                  <option selected value="none">None</option>
+                </select>
+              </div>
+              <div class="">
+                <p style="font-weight : bold; color : #9098A5; margin-left : 20px; font-size : 12px;">SINCE</p>
+                <select name="cars" class="custom-select-lg mb-3" style="margin-left: 20px; width : 180px; border-radius : 3px; font-size : 16px;">
+                  <option selected>All Time</option>
+                  <option value="today">Today</option>
+                  <option value="yesterday">Yesterday</option>
+                  <option value="this week">This Week</option>
+                  <option value="last 7 days">Last 7 Days</option>
+                  <option value="This Month">This Month</option>
+                  <option value="Last Month">Last Month</option>
+                  <option value="last 30 days">Last 30 days</option>
+                  <option value="this year">This Year</option>
+                </select>
+              </div>
+              <div class="">
+                <p style="font-weight : bold; color : #9098A5; margin-left : 20px; font-size : 12px;">VIEW</p>
+                <select name="cars" class="custom-select-lg mb-3" style="margin-left: 20px; width : 180px; border-radius : 3px; font-size : 16px;">
+                  <option selected>Active Entries</option>
+                  <option value="Starred">Starred</option>
+                  <option value="Trash">Trash</option>
+                </select>
+              </div>
+              <div class="">
+                <p style="font-weight : bold; color : #9098A5; margin-left : 20px; font-size : 12px;"> </p>
+                <input class="form-control mb-3" id="myInput" type="text" placeholder=" Search this journal" style="margin-left : 20px; width : 200px; margin-top : 26px; font-size : 16px; border-radius : 3px;">
+              </div>
+            </form>
+          </div>
         </div>
 
         <?php foreach($entries as $row){?>
