@@ -67,57 +67,27 @@
                         height: 500px;
                     }
                     </style>
+<!-- disini nih -->
 
-                    <div class="dropdown">
-                        <button class="btn  dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false" style="border : none; color : #FFFFFF;">
-                            User
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                            <button class="dropdown-item" type="button">Penzu Podcast</button>
-                            <button class="dropdown-item" type="button">Account</button>
-                            <button class="dropdown-item" type="button">Help & FAQs</button>
-                            <button class="dropdown-item" type="button">Pro Support</button>
-                            <button class="dropdown-item" type="button">Logout </button>
-                        </div>
-                    </div>
+
+<div class="dropdown">
+<?php foreach($akuns as $row){?>
+  <button class="btn  dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="border : none; color : #FFFFFF;">
+  <?= $row->first_name?>
+  </button>
+  <?php }?>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+    <button class="dropdown-item" type="button">Penzu Podcast</button>
+    <button class="dropdown-item" type="button">Account</button>
+    <button class="dropdown-item" type="button">Help & FAQs</button>
+    <button class="dropdown-item" type="button">Pro Support</button>
+    <button class="dropdown-item" type="button">Logout  </button>
+  </div>
+</div>
                 </form>
             </div>
         </nav>
-        <div class="" style="background-color : #E8E8E8; position: relative; bottom: 24px; padding : 12px;">
-            <a href="<?= site_url('Entries_Controller') ?>" class="float-right" name="btnNewJournal"
-                style="background-color : #258CD1; padding : 6px 8px;
-        text-decoration: none;  font-weight : bold; border-radius : 4px; font-style : bold; color : #ffffff; margin-right : 180px;"> <img src="<?= base_url('assets/img/add.png');?>" width="16px"> New
-                Entry </a>
-
-            <a href="#" class="float-right" name="btnTag"
-                style=" padding : 6px 8px;
-        text-decoration: none;  font-weight : bold; border-radius : 6px; font-style : bold; color : #ffffff; margin-right : 8px;"> <img
-                    src="<?= base_url('assets/img/cloudDownload.png') ?>" width="20px"></a>
-
-            <style>
-            .vl {
-              border-left: 6px solid black;
-              height: 500px;
-            }
-            </style>
-
-            <div class="dropdown">
-            <?php foreach($akuns as $row){?>
-              <button class="btn  dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="border : none; color : #FFFFFF;">
-              <?= $row->first_name?>
-              </button>
-              <?php }?>
-              <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                <button class="dropdown-item" type="button">Penzu Podcast</button>
-                <button class="dropdown-item" type="button">Account</button>
-                <button class="dropdown-item" type="button">Help & FAQs</button>
-                <button class="dropdown-item" type="button">Pro Support</button>
-                <button class="dropdown-item" type="button">Logout  </button>
-              </div>
-            </div>
-          </form>
-        </div>
+      
       </nav>
       <div class="" style="background-color : #E8E8E8; position: relative; bottom: 24px; padding : 12px;">
         <a href="<?= site_url('Entries_Controller') ?>" class="float-right" name="btnNewJournal" style="background-color : #258CD1; padding : 6px 8px;
