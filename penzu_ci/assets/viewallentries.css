@@ -6,3 +6,28 @@
     color :  #4B525B;
     margin-left : 200px;
 }
+
+.custom-checkbox input{
+    font-family : "Open Sans", helvetica, sans-serif;
+    font-size : 14px;
+    font-weight : 600;
+    line-height : 14px;
+    text-align : center;
+    vertical-align : middle;
+    color :  #AFB9C6 !important;
+    height : 16px;
+    width : 16px;
+}
+
+th {
+    border-bottom: 1px solid orangered!important; 
+  }
+
+  .table-wrapper{
+    font-family : "Open Sans", helvetica, sans-serif;
+    color :  #4B525B;
+  }
+
+  thead{
+    color :  #4B525B;    
+  }

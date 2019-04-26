@@ -97,10 +97,6 @@
           </div>
           <?php }?>
           <div class="input-group flex-nowrap" style="display: inherit; background-color : #B00B1B; border-radius : 20px;">
-            <!-- <div class="input-group-prepend">
-            <span class="input-group-text" id="addon-wrapping"
-            style="border: none; border-top-left-radius: 20px; border-bottom-left-radius: 20px; background-color : #B00B1B;"> <img src="<?= base_url('assets/img/search.png ')?>" width="18px" > </span>
-          </div> -->
           <input type="text" class="form-control" placeholder="Search Journal ..." aria-label="Username" aria-describedby="addon-wrapping"
           style="border: none; border-radius : 20px; background-color : #ffffff;">
         </div>
@@ -130,20 +126,8 @@
       <form class="form-inline ">
         <div class="input-group flex-nowrap" style="display: inherit; background-color : #B00B1B; border-radius : 20px;">
           <div class="input-group-prepend">
-            <!-- <span class="input-group-text" id="addon-wrapping"
-            style="border: none; border-top-left-radius: 20px; border-bottom-left-radius: 20px; background-color : #B00B1B;"> <img src="<?= base_url('assets/img/search.png ')?>" width="18px" > </span> -->
           </div>
-          <!-- <input type="text" class="form-control" placeholder="Search" aria-label="Username" aria-describedby="addon-wrapping"
-          style="border: none; border-radius : 20px; background-color : #B00B1B;"> -->
         </div>
-        <!-- <input class="form-control mr-sm-2" type="search" placeholder="Search"
-        style="border: none;border-radius : 20px; background-color : #B00B1B;
-        background : url(../assets/img/search.png) no-repeat scroll 7px 7px;
-        padding-left : 30px"> -->
-
-        <!-- <button class="btn btn-outline-success my-2 my-sm-0 Rounded corners" type="submit">Search</button> -->
-        <!-- <img src=".../assets/img/penzu_white.png" alt=""> -->
-        <!-- test -->
         <div class="text-center" style="margin-left : 540px; ">
           <img  style="width : 100px;" src="<?= base_url('assets/img/penzu_white.png')?>" width="10px">
         </div>
